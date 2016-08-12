@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+  - role: ansible-logrotate
+    logrotate_applications:
+    - name: simplifield
+      definitions:
+      - logs:
+        - /var/log/simplifield.log
+        options:
+          - rotate 104
+          - weekly
+          - missingok
+          - notifempty
+          - compress
