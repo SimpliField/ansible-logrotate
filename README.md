@@ -1,4 +1,4 @@
-Logrotate
+Logrotate [![Build Status](https://travis-ci.org/SimpliField/ansible-logrotate.svg?branch=master)](https://travis-ci.org/SimpliField/ansible-logrotate) [![Ansible Role](https://img.shields.io/ansible/role/11492.svg?maxAge=2592000)](https://galaxy.ansible.com/SimpliField/l…ogrotate/)
 =========
 
 Setup logrotate
