@@ -19,3 +19,14 @@
   tags:
   - logrotate
 
+- name: create logrotate application configuration files
+  template:
+    src: application.j2
+    dest: "{{ logrotate_include_dir }}/{{ item.name }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+  - "{{ logrotate_applications }}"
+  tags:
+  - logrotate

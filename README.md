@@ -51,7 +51,19 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-  - { role: SimpliField.logrotate }
+  - role: SimpliField.logrotate
+    logrotate_applications:
+    - name: apt
+      definitions:
+      - logs:
+        - /var/log/apt/term.log
+        - /var/log/apt/history.log
+        options:
+          - rotate 12
+          - monthly
+          - missingok
+          - notifempty
+          - compress
 ```
 
 License
